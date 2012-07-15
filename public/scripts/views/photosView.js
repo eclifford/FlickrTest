@@ -75,7 +75,7 @@
       //   index [Number] - the index to make active
       //
       selectByIndex: function(index) {
-        this.index = index;
+        this.index = index+1;
         var galleryItemsEl = $('#gallery ul li');
         galleryItemsEl.removeClass('active');
         $(galleryItemsEl.get(index)).addClass('active');  
