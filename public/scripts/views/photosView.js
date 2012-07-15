@@ -48,11 +48,11 @@
       // @todo - disable next button at last index
       //
       onNext: function() {
-        var that = this;
         // Stay within the bounds of the UL
-        if(that.index < that.collection.length) {
-          that.index++;
-          var photoId = $('#gallery ul li:nth-child(' + that.index + ')').attr('data-photo-id');
+        if(this.index < this.collection.length) {
+          this.index++;
+          console.log(this.index);
+          var photoId = $('#gallery ul li:nth-child(' + this.index + ')').attr('data-photo-id');
           Backbone.history.navigate("photo/" + photoId, {silent: true, trigger: true});      
         }
         return false;
@@ -75,10 +75,10 @@
       //   index [Number] - the index to make active
       //
       selectByIndex: function(index) {
-        this.index = index+1;
+        this.index = index;
         var galleryItemsEl = $('#gallery ul li');
         galleryItemsEl.removeClass('active');
-        $(galleryItemsEl.get(index)).addClass('active');  
+        $(galleryItemsEl.get(index-1)).addClass('active');  
       },
 
       // Render the collection
@@ -89,7 +89,7 @@
         _.each(this.collection.models, function(item) {
           that.renderItem(item);
         });
-        this.selectByIndex(0);
+        this.selectByIndex(1);
       },
 
       // Render an individual item
