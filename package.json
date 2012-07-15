@@ -1,0 +1,14 @@
+{
+  "author": "Eric Clifford",
+  "name": "FlickrTest",
+  "description": "A Test for Flickr",
+  "version": "0.0.0",
+  "dependencies": {
+    "serve": "~1.1.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

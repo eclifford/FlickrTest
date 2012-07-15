@@ -1,0 +1,30 @@
+body {
+  background-color: #000;
+  color: #FFF;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  list-style: none;
+}
+
+li {
+  display: none;
+}
+
+li.active {
+  display: block;
+}
+
+div#gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  text-align: center;
+}

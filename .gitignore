@@ -1,0 +1,8 @@
+.DS_STORE
+.sass-cache
+node_modules
+.project
+.settings
+.pmd
+target
+npm-debug.log
